@@ -1,0 +1,25 @@
+import java.util.Random;
+
+public class PasswordGenerator {
+
+ public static String password_using_name(String Name) {
+
+  
+  String initials = Name.substring(0, 1).toUpperCase() + Name.substring(1, Math.min(Name.length(), 4));
+
+  
+  Random random = new Random();
+  int randomNumber = 1000 + random.nextInt(9000);
+
+  
+  String generatedString = initials + randomNumber;
+
+  System.out.println(generatedString); 
+
+  return generatedString;
+ }
+
+ public static void main(String[] args) {
+  password_using_name("fdnkjhr");
+ }
+}
